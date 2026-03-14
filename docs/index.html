@@ -235,9 +235,11 @@
   <h3>What you need before starting</h3>
   <ul>
     <li>A Hospitable account with API access</li>
-    <li>A Claude account at claude.ai (free or paid)</li>
-    <li>A Railway account at railway.com (free signup, ~$5/mo)</li>
+    <li>A Claude account at claude.ai (free or paid, all plans work)</li>
+    <li>A GitHub account at github.com (free, needed for Railway)</li>
+    <li>A Railway account at railway.com (free signup, ~$5/mo to run the server)</li>
   </ul>
+  <p style="margin-top: 12px; font-size: 14px; color: #666;">Free Claude accounts get one custom connector, so this would be yours. Pro, Max, Team, and Enterprise accounts can add multiple connectors.</p>
 </div>
 
 <!-- STEP 1 -->
@@ -257,7 +259,6 @@
     <li>Enter your password and confirm</li>
     <li>Copy the token and save it somewhere (you'll need it in Step 4)</li>
   </ol>
-  <div class="screenshot-placeholder">Screenshot: Hospitable token creation page</div>
   <div class="tip">
     <strong>Heads up:</strong> This token expires after about 1 year. If things stop working later, just come back and generate a new one.
   </div>
@@ -267,15 +268,20 @@
 <div class="step">
   <div class="step-header">
     <div class="step-number">2</div>
-    <div class="step-title">Create a Railway Account <span class="time-badge">2 min</span></div>
+    <div class="step-title">Create GitHub and Railway Accounts <span class="time-badge">3 min</span></div>
   </div>
-  <p>Railway is where your server will run. It stays on 24/7 so you can use Hospitable from Claude anytime, on any device.</p>
+  <p>You need both a GitHub account (where the server code lives) and a Railway account (where the server runs). Railway uses GitHub to log in.</p>
+  <p><strong>A) GitHub (skip if you already have one):</strong></p>
+  <ol>
+    <li>Go to <strong>github.com</strong></li>
+    <li>Click <strong>Sign Up</strong> and create a free account</li>
+  </ol>
+  <p><strong>B) Railway:</strong></p>
   <ol>
     <li>Go to <strong>railway.com</strong></li>
-    <li>Click <strong>Sign Up</strong> (GitHub login is fastest)</li>
+    <li>Click <strong>Sign Up</strong> and log in with your GitHub account</li>
     <li>You may need to add a credit card for the Hobby plan (~$5/mo)</li>
   </ol>
-  <div class="screenshot-placeholder">Screenshot: Railway signup page</div>
 </div>
 
 <!-- STEP 3 -->
@@ -294,7 +300,6 @@
   <ol start="4">
     <li>Wait about 30 seconds for the build to finish</li>
   </ol>
-  <div class="screenshot-placeholder">Screenshot: Railway "Deploy from GitHub Repo" dialog</div>
 </div>
 
 <!-- STEP 4 -->
@@ -314,7 +319,6 @@
     <li>Value: paste your token from Step 1</li>
     <li>Click <strong>Add</strong></li>
   </ol>
-  <div class="screenshot-placeholder">Screenshot: Railway Variables tab with HOSPITABLE_PAT</div>
 
   <p><strong>B) Set the start command:</strong></p>
   <ol>
@@ -324,7 +328,6 @@
     <li>Type exactly:</li>
   </ol>
   <div class="code-block">python server.py --http</div>
-  <div class="screenshot-placeholder">Screenshot: Railway start command field</div>
 
   <p><strong>C) Enable public access:</strong></p>
   <ol>
@@ -333,7 +336,6 @@
     <li>You'll get a URL like: <em>your-service-production-xxxx.up.railway.app</em></li>
     <li>Copy this URL. You'll need it next.</li>
   </ol>
-  <div class="screenshot-placeholder">Screenshot: Railway generated domain URL</div>
 
   <p>Click <strong>Deploy</strong> at the bottom to apply all changes. Wait for the deployment to show <strong>ACTIVE</strong> in the Deployments tab.</p>
 </div>
@@ -359,7 +361,6 @@
     <li>Find Hospitable in the list and click <strong>Connect</strong></li>
   </ol>
   <div class="success">If the button changes from "Connect" to "Configure", you're connected!</div>
-  <div class="screenshot-placeholder">Screenshot: Claude.ai custom connector dialog + connected state</div>
 </div>
 
 <!-- STEP 6 -->
